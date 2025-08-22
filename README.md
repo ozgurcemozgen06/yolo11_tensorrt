@@ -25,6 +25,7 @@ This repo contains two mini-projects:
 **All videos (Drive folder):** <https://drive.google.com/drive/folders/1ecePVSIe8f9SeE78q3aq3kYRmuihbyhP?usp=drive_link> 
 
 **Quantitative (20-s clip, 669 timed frames; warm-up 20 frames):**  
+
 TensorRT delivered clear speedups over baseline PyTorch on video inference. FP16 ran at **17.39 ms/frame (57.50 FPS)**—about **36% lower latency** (+58% FPS) than baseline **27.30 ms (36.63 FPS)**. INT8 was fastest at **14.32 ms/frame (69.84 FPS)**—about **48% lower latency** (+91% FPS). TRT FP32 measured **30.39 ms (32.91 FPS)**, slightly slower than baseline, which is expected when end-to-end timing includes identical pre/post steps (decode, letterbox, NMS, drawing) that TensorRT doesn’t accelerate.
 
 
@@ -51,7 +52,7 @@ TensorRT delivered clear speedups over baseline PyTorch on video inference. FP16
 - FP16 ≈ baseline accuracy; ~20–30% lower latency.
 - INT8 fastest; tiny mAP drop; best tail latency (p95).
 
-_See `results/part2/*.csv` and `figures/` for raw tables and plots._
+_See `results/part2/*.csv` for raw tables of accuracy and throughput comparison of baseline and .engine models.
 
 ## Notes
 - INT8 calibration used `val` split with fraction 1.0 and `imgsz=640`.
