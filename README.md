@@ -59,4 +59,4 @@ _See `results/part2/*.csv` for raw tables of accuracy and throughput comparison 
 - Engines exported with `batch=1` (static) and `dynamic=False`.  
 
 
-**Background note:** See [docs/TensorRT_Summary.md](docs/TensorRT_Summary.md) for a concise overview of TensorRT’s workflow, precision modes, calibration, and how we used it in this repo.
+**Background note:** See [TensorRT_Summary.md](TensorRT_Summary.md) for a concise overview of TensorRT’s workflow, precision modes, calibration, and how we used it in this repo.
