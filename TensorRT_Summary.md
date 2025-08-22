@@ -89,13 +89,13 @@ In this work, I used **Ultralytics’ built-in exporter** to go directly from `.
 
 - **Weak calibration**  
   Too few / unrepresentative images → larger INT8 accuracy drop.  
-  **Fix**: use hundreds of images from similar distribution; we used `fraction=1.0` on the dataset.
+  **Fix**: use hundreds of images from similar distribution; used `fraction=1.0` on the dataset.
 
 - **Non-persistent artifacts**  
-  Colab `/content` is temporary. I copy engines/CSVs to Drive for persistence.
+  Colab `/content` is temporary. Copied the engines/CSVs to Drive for persistence.
 
 - **Unfair timing**  
-  We warm up per model and keep pre/post identical across runs; we also report p50/p95 to expose jitter.
+  Warmed up per model and keep pre/post identical across runs; also report p50/p95 to expose jitter.
 
 ---
 
