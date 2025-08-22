@@ -23,7 +23,7 @@ In this work, I used **Ultralytics’ built-in exporter** to go directly from `.
 ## 3) Key concepts & vocabulary
 
 - **Network / Engine**  
-  The *engine* (`.engine` file) is the compiled, hardware-specific, optimized form of your model.
+  The *engine* (`.engine` file) is the compiled, hardware-specific, optimized form of the model.
 
 - **Builder & BuilderConfig**  
   The *builder* picks optimization tactics and emits the engine. The *config* controls precision (FP32/FP16/INT8), workspace (memory for tactic search), and optimization profiles.
@@ -58,17 +58,17 @@ In this work, I used **Ultralytics’ built-in exporter** to go directly from `.
 - Report **mAP50**, **mAP50–95**, precision, recall.
 
 ### (C) Measure speed (two contexts we used)
-- **Part 1 (video)**: end-to-end ms/frame & FPS on a 20-s clip (includes pre/post, fair to real use).
+- **Part 1 (video)**: end-to-end ms/frame & FPS on a 20-s clip.
 - **Part 2 (dataset)**: images/sec (ms/image) on the **test** split, **batch=1**, report p50 & p95 latency.
 
-> We keep the same `imgsz` and confidence threshold across models to make the comparison fair.
+> I keep the same `imgsz` and confidence threshold across models to make the comparison fair.
 
 ---
 
 ## 5) Interpreting results (what to expect)
 
 - **Accuracy**
-  - FP32/FP16 engines ≈ baseline `.pt` (tiny numeric/NMS wiggles are normal).
+  - FP32/FP16 engines ≈ baseline `.pt`.
   - INT8: small mAP drop unless calibration is extensive and matches deployment.
 
 - **Latency / Throughput**
