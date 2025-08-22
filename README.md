@@ -57,3 +57,6 @@ _See `results/part2/*.csv` for raw tables of accuracy and throughput comparison 
 ## Notes
 - INT8 calibration used `val` split with fraction 1.0 and `imgsz=640`.
 - Engines exported with `batch=1` (static) and `dynamic=False`.  
+
+
+**Background note:** See [docs/TensorRT_Summary.md](docs/TensorRT_Summary.md) for a concise overview of TensorRT’s workflow, precision modes, calibration, and how we used it in this repo.
